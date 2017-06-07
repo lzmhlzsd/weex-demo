@@ -1,16 +1,4 @@
-# Hacker News App
-
-[中文版说明文档](./README.zh.md)
-
-A mobile app for [Hacker News](https://news.ycombinator.com/), which is powered by Weex and Vue.
-
-## Preview
-
-Use [Weex Playground App](https://weex.apache.org/playground.html) to scan the QR code below.
-
-![QR Code](./qrcode.jpg)
-
-> The content of this QR code is `http://whatever.cn?_wx_tpl=https://raw.githubusercontent.com/weexteam/weex-hackernews/master/ios/assets/index.js` , please make sure your phone can assess GitHub.
+# Weex-demo
 
 ## Compile
 
@@ -22,7 +10,7 @@ npm install
 
 Compile the source code:
 
-+ `npm run build` # Compile the source code for web platform and native platform.
++ `npm run build:native` # Compile the source code for web platform and native platform.
 + `npm run dev` # Watch mode for `npm run build`.
 
 Copy the bundle file:
@@ -33,7 +21,7 @@ Copy the bundle file:
 
 More npm scripts will be find in the `package.json`.
 
-### Start Web Service
+### 启动web服务
 
 ```
 npm run serve
