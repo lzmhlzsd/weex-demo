@@ -1,0 +1,51 @@
+{
+  "name": "weex-hackernews",
+  "version": "1.0.0",
+  "description": "Weex HackerNews App, powered by Vue.js.",
+  "main": "index.js",
+  "keywords": [
+    "weex",
+    "vue",
+    "hackernews",
+    "javascript",
+    "android",
+    "ios"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "build:native": "webpack --config build/webpack.native.config.js",
+    "dev": "webpack --watch",
+    "copy:android": "rm -rf android/app/src/main/assets/* && cp -vrf dist/native/* android/app/src/main/assets/",
+    "copy:ios": "rm -rf ios/assets/* && cp -vrf dist/native/* ios/assets/",
+    "copy": "npm run copy:android && npm run copy:ios",
+    "copy1:android": "rm -rf android/app/src/main/assets/* && cp -vrf dist/index.weex.js android/app/src/main/assets/index.js",
+    "copy1:ios": "rm -rf ios/assets/* && cp -vrf dist/index.weex.js ios/assets/index.js",
+    "copy1": "npm run copy1:android && npm run copy1:ios",
+    "serve": "serve -p 1337",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
+  "author": "Hanks <zhanghan.me@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "vue": "^2.1.10",
+    "vue-router": "^2.1.1",
+    "vuex": "^2.1.1",
+    "vuex-router-sync": "^4.0.1",
+    "weex-components": "^0.2.0",
+    "weex-vue-render": "^0.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "serve": "^1.4.0",
+    "vue-loader": "^10.0.2",
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "^2.2.1",
+    "weex-loader": "^0.4.4"
+  }
+}
